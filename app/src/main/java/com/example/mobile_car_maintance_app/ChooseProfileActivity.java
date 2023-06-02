@@ -6,22 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class ChooseProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_choose_profile);
     }
 
-    public void goToChoosingProfile(View v) {
-        Intent intent = new Intent(this, ChooseProfileActivity.class);
-        startActivity(intent);
-    }
-
-    public void goToCreatingProfile(View v) {
-        Intent intent = new Intent(this, CreatingProfile.class);
+    public void goToProfile(View v) {
+        Intent intent = new Intent(this, ProfileContentActivity.class);
         startActivity(intent);
     }
 }

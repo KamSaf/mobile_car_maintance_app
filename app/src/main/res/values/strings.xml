@@ -1,3 +1,42 @@
 <resources>
-    <string name="app_name">mobile_car_maintance_app</string>
+    <string name="app_name">Dziennik kosztów</string>
+    <string name="title">Dziennik kosztów</string>
+    <string name="register">Stwórz profil</string>
+    <string name="profile_name">Nazwa profilu</string>
+    <string name="create">Stwórz</string>
+    <string name="choose_car">Wybierz pojazd</string>
+    <string name="workshop_database">Baza warsztatów</string>
+    <string name="add_car">Dodaj pojazd</string>
+    <string name="delete_car">Usuń pojazd</string>
+    <string name="delete_profile">Usuń profil</string>
+    <string name="choose_profile">Wybierz profil</string>
+    <string name="new_car">Nowy pojazd</string>
+    <string name="add_entry">Dodaj wpis</string>
+    <string name="delete_entry">Usuń wpis</string>
+    <string name="car_info">Informacje o pojeździe</string>
+    <string name="new_entry">Nowy wpis</string>
+
+    <string name="car_make">Marka</string>
+    <string name="car_model">Model</string>
+    <string name="engine_displacement">Pojemność</string>
+    <string name="fuel_type">Paliwo</string>
+    <string name="production_year">Rok produkcji</string>
+    <string name="engine_power">Moc</string>
+    <string name="vin">Numer VIN</string>
+    <string name="number_plate">Numer rejestracyjny</string>
+
+    <string name="category_service">Serwis</string>
+    <string name="category_expense">Wydatek</string>
+    <string name="category_other">Inne</string>
+
+    <string name="date">Data</string>
+    <string name="mileage">Przebieg</string>
+    <string name="name">Nazwa</string>
+    <string name="item">Pozycja</string>
+    <string name="extra_info">Dodatkowe informacje</string>
+    <string name="cost">Koszt</string>
+    <string name="place">Miejsce</string>
+
+    <string name="add_workshop">Dodaj warsztat</string>
+    <string name="search_on_map">Szukaj na mapie</string>
 </resources>

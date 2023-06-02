@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ChooseCarActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/title"
+            android:text="@string/choose_car"
             android:textAlignment="center"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -28,25 +28,27 @@
         <ImageView
             android:id="@+id/imageViewCar3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/mechanic" />
+            android:layout_height="174dp"
+            app:srcCompat="@mipmap/car" />
 
-        <Button
-            android:id="@+id/chooseCarButton"
+        <ScrollView
+            android:id="@+id/profilesList"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:onClick="goToCreatingProfile"
-            android:text="@string/register" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/addCarButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:onClick="goToChoosingProfile"
-            android:text="@string/choose_profile" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="goToCarEntries"
+                    android:text="POJAZD" />
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
