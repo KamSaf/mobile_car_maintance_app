@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ChooseProfileActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/title"
+            android:text="@string/choose_profile"
             android:textAlignment="center"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -28,23 +28,19 @@
         <ImageView
             android:id="@+id/imageViewCar3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="174dp"
             app:srcCompat="@mipmap/mechanic" />
 
-        <Button
-            android:id="@+id/chooseCarButton"
+        <ScrollView
+            android:id="@+id/profilesList"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/register" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/addCarButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/log_in" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

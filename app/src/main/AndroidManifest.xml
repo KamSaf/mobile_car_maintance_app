@@ -12,6 +12,21 @@
         android:theme="@style/Theme.Mobile_car_maintance_app"
         tools:targetApi="31">
         <activity
+            android:name=".AddCarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseCarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileContentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreatingProfile"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">mobile_car_maintance_app</string>
+    <string name="app_name">Dziennik kosztów</string>
+    <string name="title">Dziennik kosztów</string>
+    <string name="register">Stwórz profil</string>
+    <string name="log_in">Zaloguj się</string>
+    <string name="profile_name">Nazwa profilu</string>
+    <string name="create">Stwórz</string>
+    <string name="choose_car">Wybierz pojazd</string>
+    <string name="workshop_database">Baza warsztatów</string>
+    <string name="add_car">Dodaj pojazd</string>
+    <string name="delete_profile">Usuń profil</string>
+    <string name="choose_profile">Wybierz profil</string>
+    <string name="new_car">Nowy pojazd</string>
+
+    <string name="car_make">Marka</string>
+    <string name="car_model">Model</string>
+    <string name="engine_displacement">Pojemność</string>
+    <string name="fuel_type">Paliwo</string>
+    <string name="production_year">Rok produkcji</string>
+    <string name="engine_power">Moc</string>
+    <string name="vin">Numer VIN</string>
+    <string name="number_plate">Numer rejestracyjny</string>
 </resources>
