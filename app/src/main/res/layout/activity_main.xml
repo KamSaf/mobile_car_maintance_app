@@ -36,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:onClick="goToCreatingProfile"
             android:text="@string/register" />
 
         <Button
@@ -43,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:onClick="goToChoosingProfile"
             android:text="@string/choose_profile" />
 
     </LinearLayout>

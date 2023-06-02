@@ -44,6 +44,7 @@
                     android:id="@+id/button2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="goToWorkshopDetails"
                     android:text="WARSZTAT" />
 
             </LinearLayout>
@@ -53,6 +54,7 @@
             android:id="@+id/addWorkshopButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="goToWorkshopDetails"
             android:text="@string/add_workshop" />
 
         <Button

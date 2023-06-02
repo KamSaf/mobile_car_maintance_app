@@ -44,6 +44,7 @@
                     android:id="@+id/button2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="goToEntry"
                     android:text="WPIS" />
 
             </LinearLayout>
@@ -53,6 +54,7 @@
             android:id="@+id/addWorkshopButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="addNewEntry"
             android:text="@string/add_entry" />
 
         <Button
@@ -60,6 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:onClick="goToCarInfo"
             android:text="@string/car_info" />
 
     </LinearLayout>
