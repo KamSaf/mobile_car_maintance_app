@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddCarActivity">
+    tools:context=".EntryContentActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -21,15 +21,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/newEntryTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="@string/new_car"
+                    android:text="@string/title"
                     android:textAlignment="center"
                     android:textSize="32sp"
                     android:textStyle="bold" />
@@ -40,84 +40,60 @@
                     android:layout_height="174dp"
                     app:srcCompat="@mipmap/car" />
 
-                <EditText
-                    android:id="@+id/editTextDate"
+                <TextView
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/car_make" />
+                    android:text="TextView" />
 
-                <EditText
-                    android:id="@+id/editTextMileage"
+                <TextView
+                    android:id="@+id/category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/car_model" />
+                    android:text="TextView" />
 
-                <EditText
-                    android:id="@+id/editTextName"
+                <TextView
+                    android:id="@+id/date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/production_year" />
+                    android:text="TextView" />
 
-                <EditText
-                    android:id="@+id/editTextPlace"
+                <TextView
+                    android:id="@+id/mileage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/fuel_type" />
+                    android:text="TextView" />
 
-                <EditText
-                    android:id="@+id/editTextCost"
+                <TextView
+                    android:id="@+id/cost"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/engine_displacement" />
+                    android:text="TextView" />
 
-                <EditText
-                    android:id="@+id/editTextPower"
+                <TextView
+                    android:id="@+id/place"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/engine_power" />
+                    android:text="TextView" />
 
-                <EditText
-                    android:id="@+id/editTextNumberPlate"
+                <TextView
+                    android:id="@+id/items"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/number_plate" />
+                    android:text="TextView" />
 
-                <EditText
-                    android:id="@+id/editTextVin"
+                <ImageView
+                    android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/vin" />
+                    app:srcCompat="@mipmap/ic_launcher" />
 
                 <Button
                     android:id="@+id/addNewEntryButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="@string/add_car" />
+                    android:text="@string/delete_entry" />
             </LinearLayout>
         </ScrollView>
 

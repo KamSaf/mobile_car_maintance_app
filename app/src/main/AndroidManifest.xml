@@ -12,6 +12,15 @@
         android:theme="@style/Theme.Mobile_car_maintance_app"
         tools:targetApi="31">
         <activity
+            android:name=".AddEntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EntryContentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MaintanceEntriesActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddCarActivity"
             android:exported="false" />
         <activity
