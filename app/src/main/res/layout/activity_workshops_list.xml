@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileContentActivity">
+    tools:context=".WorkshopsListActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -16,50 +16,51 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/workshopsList"
+            android:id="@+id/workshopsListTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/title"
+            android:text="@string/workshop_database"
             android:textAlignment="center"
             android:textSize="32sp"
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imageViewCar"
+            android:id="@+id/imageViewCar3"
             android:layout_width="match_parent"
-            android:layout_height="112dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="174dp"
             app:srcCompat="@mipmap/car" />
 
-        <Button
-            android:id="@+id/chooseCarButton"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:text="@string/choose_car" />
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WARSZTAT" />
+
+            </LinearLayout>
+        </ScrollView>
 
         <Button
-            android:id="@+id/addCarButton"
+            android:id="@+id/addWorkshopButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/add_car" />
+            android:text="@string/add_workshop" />
 
         <Button
-            android:id="@+id/workshopBaseButton"
+            android:id="@+id/searchOnMap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/workshop_database" />
-
-        <Button
-            android:id="@+id/deleteProfileButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
-            android:text="@string/delete_profile" />
+            android:layout_marginTop="20dp"
+            android:text="@string/search_on_map" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

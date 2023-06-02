@@ -12,29 +12,45 @@
         android:theme="@style/Theme.Mobile_car_maintance_app"
         tools:targetApi="31">
         <activity
+            android:name=".WorkshopDetailsActivity"
+            android:exported="false"
+            android:parentActivityName=".WorkshopsListActivity"/>
+        <activity
+            android:name=".WorkshopsListActivity"
+            android:exported="false"
+            android:parentActivityName=".ProfileContentActivity"/>
+        <activity
             android:name=".AddEntryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MaintanceEntriesActivity"/>
         <activity
             android:name=".EntryContentActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MaintanceEntriesActivity"/>
         <activity
             android:name=".MaintanceEntriesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ProfileContentActivity"/>
         <activity
             android:name=".AddCarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ProfileContentActivity"/>
         <activity
             android:name=".ChooseCarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ProfileContentActivity"/>
         <activity
             android:name=".ChooseProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".ProfileContentActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ChooseProfileActivity"/>
         <activity
             android:name=".CreatingProfile"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

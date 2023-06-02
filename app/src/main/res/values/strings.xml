@@ -36,4 +36,7 @@
     <string name="extra_info">Dodatkowe informacje</string>
     <string name="cost">Koszt</string>
     <string name="place">Miejsce</string>
+
+    <string name="add_workshop">Dodaj warsztat</string>
+    <string name="search_on_map">Szukaj na mapie</string>
 </resources>
