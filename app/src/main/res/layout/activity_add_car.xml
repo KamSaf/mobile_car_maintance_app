@@ -41,82 +41,83 @@
                     app:srcCompat="@mipmap/car" />
 
                 <EditText
-                    android:id="@+id/editTextDate"
+                    android:id="@+id/editTextCarMake"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="@string/car_make"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/car_make" />
+                    android:minHeight="48dp" />
 
                 <EditText
-                    android:id="@+id/editTextMileage"
+                    android:id="@+id/editTextCarModel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="@string/car_model"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/car_model" />
+                    android:minHeight="48dp" />
 
                 <EditText
-                    android:id="@+id/editTextName"
+                    android:id="@+id/editTextPrYear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="@string/production_year"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/production_year" />
+                    android:minHeight="48dp" />
 
                 <EditText
-                    android:id="@+id/editTextPlace"
+                    android:id="@+id/editTextFuel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="@string/fuel_type"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/fuel_type" />
+                    android:minHeight="48dp" />
 
                 <EditText
-                    android:id="@+id/editTextCost"
+                    android:id="@+id/editTextDisplacement"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/engine_displacement" />
+                    android:hint="@string/engine_displacement"
+                    android:inputType="none|number"
+                    android:minHeight="48dp" />
 
                 <EditText
-                    android:id="@+id/editTextPower"
+                    android:id="@+id/ediTextPower"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/engine_power" />
+                    android:hint="@string/engine_power"
+                    android:inputType="number|textPersonName"
+                    android:minHeight="48dp" />
 
                 <EditText
                     android:id="@+id/editTextNumberPlate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="@string/number_plate"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/number_plate" />
+                    android:minHeight="48dp" />
 
                 <EditText
                     android:id="@+id/editTextVin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:hint="@string/vin"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="@string/vin" />
+                    android:minHeight="48dp" />
 
                 <Button
                     android:id="@+id/searchOnMap"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:onClick="addCar"
                     android:text="@string/add_car" />
             </LinearLayout>
         </ScrollView>

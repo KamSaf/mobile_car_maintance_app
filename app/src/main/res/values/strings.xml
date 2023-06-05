@@ -15,6 +15,7 @@
     <string name="delete_entry">Usuń wpis</string>
     <string name="car_info">Informacje o pojeździe</string>
     <string name="new_entry">Nowy wpis</string>
+    <string name="entries">Wpisy</string>
 
     <string name="car_make">Marka</string>
     <string name="car_model">Model</string>
