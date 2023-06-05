@@ -39,4 +39,6 @@
 
     <string name="add_workshop">Dodaj warsztat</string>
     <string name="search_on_map">Szukaj na mapie</string>
+
+    <string name="delete_all_profiles">Usuń wszystkie profile</string>
 </resources>

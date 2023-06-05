@@ -37,15 +37,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:ems="10"
+            android:hint="@string/profile_name"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:text="@string/profile_name" />
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/createProfileButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:onClick="createProfile"
             android:text="@string/create" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

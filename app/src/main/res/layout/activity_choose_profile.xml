@@ -15,38 +15,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/workshopsList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/choose_profile"
-            android:textAlignment="center"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageViewCar3"
-            android:layout_width="match_parent"
-            android:layout_height="174dp"
-            app:srcCompat="@mipmap/mechanic" />
-
         <ScrollView
             android:id="@+id/profilesList"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/profilesListLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/button3"
+                <ImageView
+                    android:id="@+id/imageViewCar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="174dp"
+                    app:srcCompat="@mipmap/mechanic" />
+
+                <TextView
+                    android:id="@+id/chooseProfileTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="goToProfile"
-                    android:text="PROFIL" />
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/choose_profile"
+                    android:textAlignment="center"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </ScrollView>
 
