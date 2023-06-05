@@ -28,6 +28,7 @@ public class ProfileContentActivity extends AppCompatActivity {
         int loggedUserId = pref.getInt("logged_user_id", 999);
 
         myDB.delete("profilesDatabase", "id=?", new String[]{String.valueOf(loggedUserId)});
+        myDB.delete("workshopsDatabase", "profileId=?", new String[]{String.valueOf(loggedUserId)});
         myDB.close();
         Intent intent = new Intent(this, ChooseProfileActivity.class);
         startActivity(intent);
