@@ -14,7 +14,7 @@
         <activity
             android:name=".CarInfoActivity"
             android:exported="false"
-            android:parentActivityName=".MaintanceEntriesActivity" />
+            android:parentActivityName=".EntriesListActivity" />
         <activity
             android:name=".AddWorkshopActivity"
             android:exported="false"
@@ -30,15 +30,15 @@
         <activity
             android:name=".AddEntryActivity"
             android:exported="false"
-            android:parentActivityName=".MaintanceEntriesActivity" />
+            android:parentActivityName=".EntriesListActivity" />
         <activity
             android:name=".EntryContentActivity"
             android:exported="false"
-            android:parentActivityName=".MaintanceEntriesActivity" />
+            android:parentActivityName=".EntriesListActivity" />
         <activity
-            android:name=".MaintanceEntriesActivity"
+            android:name=".EntriesListActivity"
             android:exported="false"
-            android:parentActivityName=".ProfileContentActivity" />
+            android:parentActivityName=".ChooseCarActivity" />
         <activity
             android:name=".AddCarActivity"
             android:exported="false"
