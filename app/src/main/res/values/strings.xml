@@ -38,5 +38,14 @@
     <string name="place">Miejsce</string>
 
     <string name="add_workshop">Dodaj warsztat</string>
+    <string name="delete_workshop">Usuń warsztat</string>
     <string name="search_on_map">Szukaj na mapie</string>
+
+    <string name="workshop_name">Nazwa warsztatu</string>
+    <string name="address">Adres</string>
+    <string name="city">Miejscowość</string>
+    <string name="sector">Specjalizacja</string>
+    <string name="phone_number">Numer telefonu</string>
+    <string name="new_workshop">Nowy warsztat</string>
+
 </resources>

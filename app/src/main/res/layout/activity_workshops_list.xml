@@ -29,32 +29,26 @@
             android:id="@+id/imageViewCar3"
             android:layout_width="match_parent"
             android:layout_height="174dp"
-            app:srcCompat="@mipmap/car" />
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:srcCompat="@mipmap/workshop" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="300dp">
 
             <LinearLayout
+                android:id="@+id/workshopsListLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="goToWorkshopDetails"
-                    android:text="WARSZTAT" />
-
-            </LinearLayout>
+                android:orientation="vertical"/>
         </ScrollView>
 
         <Button
             android:id="@+id/addWorkshopButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="goToWorkshopDetails"
+            android:onClick="goToAddWorkshop"
             android:text="@string/add_workshop" />
 
         <Button

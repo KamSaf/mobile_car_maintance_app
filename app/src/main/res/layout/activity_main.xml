@@ -15,37 +15,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/workshopsList"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/title"
-            android:textAlignment="center"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageViewCar3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/mechanic" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/chooseCarButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:onClick="goToCreatingProfile"
-            android:text="@string/register" />
+                <TextView
+                    android:id="@+id/workshopsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/title"
+                    android:textAlignment="center"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/addCarButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:onClick="goToChoosingProfile"
-            android:text="@string/choose_profile" />
+                <ImageView
+                    android:id="@+id/imageViewCar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/mechanic" />
+
+                <Button
+                    android:id="@+id/createProfileButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:onClick="goToCreatingProfile"
+                    android:text="@string/register" />
+
+                <Button
+                    android:id="@+id/chooseProfileButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:onClick="goToChoosingProfile"
+                    android:text="@string/choose_profile" />
+
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 
