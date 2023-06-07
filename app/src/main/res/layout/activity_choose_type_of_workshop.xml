@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseTypeOfWorkshopActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/mechanicWorkshop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="searchForMechanicWorkshop"
+            android:text="@string/mechanic" />
+
+        <Button
+            android:id="@+id/bodyWorkshop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="searchForBodyWorkshop"
+            android:text="@string/bodywork" />
+
+        <Button
+            android:id="@+id/paintWorkshop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="searchForPaintWorkshop"
+            android:text="@string/paint_workshop" />
+
+        <Button
+            android:id="@+id/diagnosticStation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="searchForDiagnosticStation"
+            android:text="@string/diagnostic_station" />
+
+        <Button
+            android:id="@+id/petrolStation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="searchForPetrolStation"
+            android:text="@string/petrol_station" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

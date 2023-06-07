@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.security.identity.CredentialDataResult;
+import android.view.View;
 import android.widget.TextView;
 
 public class EntryContentActivity extends AppCompatActivity {
@@ -46,5 +48,14 @@ public class EntryContentActivity extends AppCompatActivity {
         }
         myCursor.close();
         myDB.close();
+    }
+    public void deleteEntry(View v){
+        SQLiteDatabase myDB = openOrCreateDatabase("database.db", MODE_PRIVATE, null);
+        Bundle b = getIntent().getExtras();
+        int givenId = b.getInt("entry_id");
+        myDB.delete("entriesDatabase", "id=?", new String[]{String.valueOf(givenId)});
+        myDB.close();
+        Intent intent = new Intent(this, EntriesListActivity.class);
+        startActivity(intent);
     }
 }

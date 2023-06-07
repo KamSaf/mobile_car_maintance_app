@@ -64,6 +64,7 @@
                 android:id="@+id/entriesListLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="32dp"
                 android:orientation="vertical" />
 
         </LinearLayout>

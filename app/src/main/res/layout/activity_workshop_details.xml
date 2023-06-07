@@ -75,10 +75,34 @@
                     android:textSize="24sp" />
 
                 <Button
+                    android:id="@+id/callButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onClick="callWorkshop"
+                    android:text="@string/call" />
+
+                <Button
+                    android:id="@+id/smsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onClick="sendMessageToWorkshop"
+                    android:text="@string/sms" />
+
+                <Button
+                    android:id="@+id/showWorkshopOnMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onClick="showOnMap"
+                    android:text="@string/show_on_map" />
+
+                <Button
                     android:id="@+id/deleteWorkshop"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="20dp"
                     android:onClick="deleteWorkshop"
                     android:text="@string/delete_workshop" />
             </LinearLayout>

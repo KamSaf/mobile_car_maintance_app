@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,8 +54,17 @@ public class WorkshopsListActivity extends AppCompatActivity {
 
     public void goToWorkshopDetails(int id, String name) {
         Intent intent = new Intent(this, WorkshopDetailsActivity.class);
-        intent.putExtra("workshop_name", name);
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("MyPref", 0);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("chosen_workshop", name);
+        editor.putInt("chosen_workshop_id", id);
+        editor.apply();
         intent.putExtra("workshop_id", id);
+        startActivity(intent);
+    }
+
+    public void searchOnMap(View v){
+        Intent intent = new Intent(this, ChooseTypeOfWorkshopActivity.class);
         startActivity(intent);
     }
 
