@@ -31,6 +31,9 @@ public class CreatingProfile extends AppCompatActivity {
         myDB.execSQL(
                 "CREATE TABLE IF NOT EXISTS workshopsDatabase (id integer primary key, profileId integer, name VARCHAR(200), address VARCHAR(200), sector VARCHAR(200), city VARCHAR(100), phoneNumber VARCHAR(50))"
         );
+        myDB.execSQL(
+                "CREATE TABLE IF NOT EXISTS entriesDatabase (id integer primary key, profileId integer, carId integer, category VARCHAR(50),date VARCHAR(50), mileage integer, name VARCHAR(100), place VARCHAR(100), cost integer, items VARCHAR(500))"
+        );
         ContentValues profile = new ContentValues();
         EditText inputName = findViewById(R.id.profileName);
         profile.put("name", inputName.getText().toString());
