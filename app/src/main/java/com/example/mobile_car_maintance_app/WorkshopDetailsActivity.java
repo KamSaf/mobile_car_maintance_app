@@ -42,6 +42,7 @@ public class WorkshopDetailsActivity extends AppCompatActivity {
             city.setText("Miejscowość:  "+myCursor.getString(2));
             phoneNumber.setText("Numer tel.:  "+myCursor.getString(3));
         }
+        myCursor.close();
         myDB.close();
     }
 

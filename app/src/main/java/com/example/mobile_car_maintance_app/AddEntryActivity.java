@@ -39,8 +39,10 @@ public class AddEntryActivity extends AppCompatActivity {
         LinearLayout entryItemsListLayout = findViewById(R.id.entryItemsList);
         EditText newItem = new EditText(this);
         newItem.setHint("Pozycja");
+        newItem.setId(View.generateViewId());
         entryItemsListLayout.addView(newItem);
     }
+
 
     public void createEntry(View v){
         SQLiteDatabase myDB = openOrCreateDatabase("database.db", MODE_PRIVATE, null);
@@ -65,11 +67,13 @@ public class AddEntryActivity extends AppCompatActivity {
         EditText cost = findViewById(R.id.editTextCost);
         LinearLayout itemsList = findViewById(R.id.entryItemsList);
         StringBuilder sB = new StringBuilder();
+        sB.append("\n");
         for(int i=0; i<itemsList.getChildCount(); i++){
+            EditText item = findViewById(itemsList.getChildAt(i).getId());
+            sB.append("\n");
             sB.append(i+1);
             sB.append(". ");
-            sB.append(itemsList.getChildAt(i));
-            sB.append("\t");
+            sB.append(item.getText().toString());
         }
         entry.put("category", category);
         entry.put("date", date.getText().toString());

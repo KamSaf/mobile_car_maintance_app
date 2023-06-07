@@ -25,7 +25,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/workshopsList"
+                    android:id="@+id/entryContentTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
@@ -41,51 +41,58 @@
                     app:srcCompat="@mipmap/car" />
 
                 <TextView
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-
-                <TextView
                     android:id="@+id/category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_marginTop="24dp"
+                    android:text="TextView"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_marginTop="24dp"
+                    android:text="TextView"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/mileage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_marginTop="24dp"
+                    android:text="TextView"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/cost"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_marginTop="24dp"
+                    android:text="TextView"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/place"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_marginTop="24dp"
+                    android:text="TextView"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/items"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_marginTop="24dp"
+                    android:text="TextView"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     app:srcCompat="@mipmap/ic_launcher" />
 
                 <Button
