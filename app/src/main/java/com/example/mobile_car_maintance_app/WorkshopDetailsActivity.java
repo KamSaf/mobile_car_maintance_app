@@ -1,18 +1,29 @@
 package com.example.mobile_car_maintance_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class WorkshopDetailsActivity extends AppCompatActivity {
 
+    final private int makePhoneCall = 2;
     static private String phoneNumberString = "N/A";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +72,10 @@ public class WorkshopDetailsActivity extends AppCompatActivity {
     }
 
     public void callWorkshop(View v){
-
+        String number = "123123123";
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:"+number));
+        startActivity(callIntent);
     }
 
     public void sendMessageToWorkshop(View v){
@@ -96,4 +110,5 @@ public class WorkshopDetailsActivity extends AppCompatActivity {
         mapIntent.setPackage("com.google.android.apps.maps");
         startActivity(mapIntent);
     }
+
 }

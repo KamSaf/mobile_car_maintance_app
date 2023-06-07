@@ -5,10 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.security.identity.CredentialDataResult;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
 
 public class EntryContentActivity extends AppCompatActivity {
 
@@ -24,7 +31,7 @@ public class EntryContentActivity extends AppCompatActivity {
         TextView title = findViewById(R.id.entryContentTitle);
         title.setText(entryName);
 
-        String[] columns = {"category", "date", "mileage", "cost", "place", "items"};
+        String[] columns = {"category", "date", "mileage", "cost", "place", "items", "imageUri"};
         String selection = "id = ?";
         String[] selectionArgs = {String.valueOf(entryId)};
 
@@ -37,7 +44,8 @@ public class EntryContentActivity extends AppCompatActivity {
         TextView cost = findViewById(R.id.cost);
         TextView place = findViewById(R.id.place);
         TextView items = findViewById(R.id.items);
-
+        ImageView image = findViewById(R.id.addedPhoto);
+        Uri imageUri = Uri.parse("");
         if (myCursor.moveToFirst()) {
             category.setText("Kategoria:  "+myCursor.getString(0));
             date.setText("Data:  "+myCursor.getString(1));
@@ -45,7 +53,15 @@ public class EntryContentActivity extends AppCompatActivity {
             cost.setText("Koszt:  "+myCursor.getString(3)+" zł");
             place.setText("Miejsce:  "+myCursor.getString(4));
             items.setText("Pozycje:  "+myCursor.getString(5));
+            imageUri = Uri.parse(myCursor.getString(6));
         }
+        Bitmap bitmap = null;
+        try {
+            bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+        } catch (IOException e) {
+            Toast.makeText(this, "Wystąpił błąd przy wczytywaniu zdjęcia.", Toast.LENGTH_SHORT).show();
+        }
+        image.setImageBitmap(Bitmap.createScaledBitmap(bitmap, 600, 600, false));
         myCursor.close();
         myDB.close();
     }
