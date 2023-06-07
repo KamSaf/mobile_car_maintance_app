@@ -25,19 +25,13 @@ public class ChooseCarActivity extends AppCompatActivity {
         myDB.execSQL(
                 "CREATE TABLE IF NOT EXISTS vehiclesDatabase (id integer primary key, profileId integer, make VARCHAR(200), model VARCHAR(200), productionYear VARCHAR(200), fuelType VARCHAR(100), displacement integer, power integer, numberPlate VARCHAR(25), vin VARCHAR(50))"
         );
-        Cursor myCursor = myDB.rawQuery("select id, make, model, productionYear, fuelType, displacement, power, numberPlate, vin from vehiclesDatabase where profileId = ?",
+        Cursor myCursor = myDB.rawQuery("select id, make, model from vehiclesDatabase where profileId = ?",
                 new String[]{String.valueOf(loggedUserId)});
 
         while (myCursor.moveToNext()) {
             int id = myCursor.getInt(0);
             String carMake = myCursor.getString(1);
             String carModel = myCursor.getString(2);
-            String productionYear = myCursor.getString(3);
-            String fuelType = myCursor.getString(4);
-            int displacement = myCursor.getInt(5);
-            int power = myCursor.getInt(6);
-            String numberPlate = myCursor.getString(7);
-            String vin = myCursor.getString(8);
             LinearLayout listLayout = findViewById(R.id.carListLayout);
             Button button = new Button(this);
             button.setText(carMake +" "+ carModel);
