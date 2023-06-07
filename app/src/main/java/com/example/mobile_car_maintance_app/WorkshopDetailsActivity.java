@@ -27,7 +27,7 @@ public class WorkshopDetailsActivity extends AppCompatActivity {
         TextView title = findViewById(R.id.workshopDetailsTitle);
         title.setText(workshopName);
 
-        String[] columns = {"address", "city", "sector", "phoneNumber"};
+        String[] columns = {"sector", "address", "city", "phoneNumber"};
         String selection = "id = ?";
         String[] selectionArgs = {String.valueOf(givenId)};
 
