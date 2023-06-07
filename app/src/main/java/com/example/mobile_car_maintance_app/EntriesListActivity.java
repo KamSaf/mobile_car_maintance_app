@@ -26,7 +26,7 @@ public class EntriesListActivity extends AppCompatActivity {
 
         SQLiteDatabase myDB = openOrCreateDatabase("database.db", MODE_PRIVATE, null);
         myDB.execSQL(
-                "CREATE TABLE IF NOT EXISTS entriesDatabase (id integer primary key, profileId integer, carId integer, category VARCHAR(50),date VARCHAR(50), mileage integer, name VARCHAR(100), place VARCHAR(100), cost integer, items VARCHAR(500))"
+                "CREATE TABLE IF NOT EXISTS entriesDatabase (id integer primary key, profileId integer, carId integer, category VARCHAR(50),date VARCHAR(50), mileage integer, name VARCHAR(100), place VARCHAR(100), cost integer, items VARCHAR(500), imageUri VARCHAR(150))"
         );
         Cursor myCursor = myDB.rawQuery("select id, name, date from entriesDatabase where profileId = ?",
                 new String[]{String.valueOf(loggedUserId)});
