@@ -6,66 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".EntriesListActivity">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/entriesListTitle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/title"
-            android:textAlignment="center"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageViewCar3"
-            android:layout_width="match_parent"
-            android:layout_height="126dp"
-            app:srcCompat="@mipmap/car" />
+            <TextView
+                android:id="@+id/entriesListTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/title"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/addEntryButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="addNewEntry"
-            android:text="@string/add_entry" />
+            <ImageView
+                android:id="@+id/imageViewCar3"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                app:srcCompat="@mipmap/car" />
 
-        <Button
-            android:id="@+id/carInfoButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="24dp"
-            android:onClick="goToCarInfo"
-            android:text="@string/car_info" />
+            <Button
+                android:id="@+id/addEntryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addNewEntry"
+                android:text="@string/add_entry" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/entries"
-            android:textAlignment="center"
-            android:textSize="24dp" />
+            <Button
+                android:id="@+id/carInfoButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp"
+                android:onClick="goToCarInfo"
+                android:text="@string/car_info" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="300dp">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/entries"
+                android:textAlignment="center"
+                android:textSize="24dp" />
 
             <LinearLayout
                 android:id="@+id/entriesListLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="32dp"
                 android:orientation="vertical" />
-        </ScrollView>
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

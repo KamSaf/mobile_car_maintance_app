@@ -50,4 +50,17 @@
     <string name="phone_number">Numer telefonu</string>
     <string name="new_workshop">Nowy warsztat</string>
 
+    <string name="call">Zadzwoń</string>
+    <string name="sms">Wyślij SMS</string>
+    <string name="show_on_map">Pokaż na mapie</string>
+
+    <string name="text">Treść wiadomości</string>
+    <string name="send">Wyślij</string>
+
+    <string name="mechanic">Mechanicy</string>
+    <string name="bodywork">Blacharze</string>
+    <string name="paint_workshop">Lakiernicy</string>
+    <string name="diagnostic_station">Stacje kontroli pojazdów</string>
+    <string name="petrol_station">Stacje paliw</string>
+
 </resources>
