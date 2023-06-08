@@ -1,29 +1,17 @@
 package com.example.mobile_car_maintance_app;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
-import android.Manifest;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
-import android.telephony.SmsManager;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+import java.util.Calendar;
 
 public class WorkshopDetailsActivity extends AppCompatActivity {
-
-    final private int makePhoneCall = 2;
     static private String phoneNumberString = "N/A";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +97,15 @@ public class WorkshopDetailsActivity extends AppCompatActivity {
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         startActivity(mapIntent);
+    }
+
+    public void goToCalendar(View v){
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+        Intent intent = new Intent(Intent.ACTION_EDIT);
+        intent.setType("vnd.android.cursor.item/event");
+        intent.putExtra("allDay", false);
+        intent.putExtra("title", "Wizyta"+" - "+pref.getString("chosen_workshop", "N/A"));
+        startActivity(intent);
     }
 
 }

@@ -28,7 +28,7 @@ public class AddEntryActivity extends AppCompatActivity {
 
     private static final int PERMISSION_CODE = 3;
     private static final int CAPTURE_CODE = 4;
-    Uri imageUri;
+    Uri imageUri = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,7 +97,10 @@ public class AddEntryActivity extends AppCompatActivity {
         entry.put("carId", chosenCarId);
         entry.put("profileId", loggedUserId);
         entry.put("items", sB.toString());
-        entry.put("imageUri", String.valueOf(imageUri));
+        if (imageUri != null)
+            entry.put("imageUri", String.valueOf(imageUri));
+        else
+            entry.put("imageUri", "N/A");
         try{
             myDB.insert("entriesDatabase", null, entry);
             Toast.makeText(this, "Pomyślnie dodano wpis.", Toast.LENGTH_SHORT).show();
