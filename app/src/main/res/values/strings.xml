@@ -18,6 +18,7 @@
     <string name="entries">Wpisy</string>
     <string name="new_item">Nowa pozycja</string>
     <string name="add_photo">Dodaj zdjęcie</string>
+    <string name="go_to_calendar">Wpisz do kalendarza</string>
 
     <string name="car_make">Marka</string>
     <string name="car_model">Model</string>
