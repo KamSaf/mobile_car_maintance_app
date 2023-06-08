@@ -45,6 +45,7 @@ public class EntryContentActivity extends AppCompatActivity {
         TextView place = findViewById(R.id.place);
         TextView items = findViewById(R.id.items);
         ImageView image = findViewById(R.id.addedPhoto);
+        String imageUriString = "N/A";
         Uri imageUri = Uri.parse("");
         if (myCursor.moveToFirst()) {
             category.setText("Kategoria:  "+myCursor.getString(0));
@@ -53,15 +54,18 @@ public class EntryContentActivity extends AppCompatActivity {
             cost.setText("Koszt:  "+myCursor.getString(3)+" zł");
             place.setText("Miejsce:  "+myCursor.getString(4));
             items.setText("Pozycje:  "+myCursor.getString(5));
-            imageUri = Uri.parse(myCursor.getString(6));
+            imageUriString = myCursor.getString(6);
         }
+        imageUri = Uri.parse(imageUriString);
         Bitmap bitmap = null;
-        try {
-            bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
-        } catch (IOException e) {
-            Toast.makeText(this, "Wystąpił błąd przy wczytywaniu zdjęcia.", Toast.LENGTH_SHORT).show();
+        if(!imageUriString.equals("N/A")){
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+            } catch (IOException e) {
+                Toast.makeText(this, "Wystąpił błąd przy wczytywaniu zdjęcia.", Toast.LENGTH_SHORT).show();
+            }
+            image.setImageBitmap(Bitmap.createScaledBitmap(bitmap, 600, 600, false));
         }
-        image.setImageBitmap(Bitmap.createScaledBitmap(bitmap, 600, 600, false));
         myCursor.close();
         myDB.close();
     }
